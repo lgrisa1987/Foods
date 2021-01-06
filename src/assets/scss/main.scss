@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+@import "mixins";
+
+/* Common Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            font:{
+                family: 'Nunito',
+                sans-serif;
+                weight: 400
+            }
+}
+
+html{
+    font-size: 62.5%;
+    @include breakpoint(1400px){
+        font-size: 50%;
+    }
+     @include breakpoint(550px) {
+         font-size: 40%;
+     }
+}
+
+.section-heading {
+    font: {
+        size: 12rem;
+        weight: 900;
+    }
+
+    color: white;
+
+    text: {
+        align: center;
+        -webkit-transform: capitalize;
+            -ms-transform: capitalize;
+                transform: capitalize;
+    }
+    letter-spacing: .5rem;
+    @include text-shadow(.3rem);
+     @include breakpoint(1000px) {
+         font-size: 9rem;
+         margin: 0 5rem;
+     }
+     @include breakpoint(700px) {
+         font-size: 7rem;
+         margin: 0 10rem;
+     }
+}
+
+
+
+
+
+/* End of Common Styles */

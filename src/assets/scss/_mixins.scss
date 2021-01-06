@@ -1,0 +1,39 @@
+@mixin text-shadow($sh){
+    text-shadow: $sh $sh $sh #000;
+}
+
+@mixin box-shadow($sh,$sh1, $c) {
+    -webkit-box-shadow: $sh $sh $sh1 $c;
+            box-shadow: $sh $sh $sh1 $c;
+}
+@mixin multi-box-shadow($sh, $sh1, $c, $sh2, $sh3, $c2, $sh4, $sh5, $c3, $sh6, $sh7, $c7) {
+    -webkit-box-shadow: $sh $sh $sh1 $c,
+    $sh2 $sh2 $sh3 $c2,
+    $sh4 $sh4 $sh5 $c3,
+    $sh6 $sh6 $sh7 $c7,;
+            box-shadow: $sh $sh $sh1 $c,
+    $sh2 $sh2 $sh3 $c2,
+    $sh4 $sh4 $sh5 $c3,
+    $sh6 $sh6 $sh7 $c7,
+}
+@mixin custom-box-shadow($sh,$sh1,$c){
+                            -webkit-box-shadow: $sh $sh $sh $c, $sh1 $sh1 $sh $c;
+                                    box-shadow: $sh $sh $sh $c, $sh1 $sh1 $sh $c;
+}
+@mixin section-styles($bg-color){
+width: 100%;
+height: 100vh;
+background-color: $bg-color;
+}
+
+@mixin breakpoint($screenWidth){
+    @media (max-width: $screenWidth){
+        @content;
+    }
+}
+
+@mixin ie11{
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
+    }
+}
